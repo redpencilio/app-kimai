@@ -1,0 +1,21 @@
+services:
+  kimai:
+    image: kimai/kimai2:apache-2.28.0
+    volumes:
+      - ./config/kimai/local.yaml:/opt/kimai/config/packages/local.yaml
+      - ./data/kimai:/opt/kimai/var/data
+      - ./data/kimai-plugins:/opt/kimai/var/plugins
+    # environment:
+    #   - ADMINMAIL=admin@kimai.local
+    #   - ADMINPASS=changemeplease
+    working_dir: "/opt/kimai"
+    restart: unless-stopped
+  sqldb:
+    image: mysql:5.7
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=kimai
+      - MYSQL_USER=kimai
+    command: --default-storage-engine innodb
+    restart: unless-stopped

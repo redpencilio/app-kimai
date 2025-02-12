@@ -1,0 +1,4 @@
+monolog:
+    handlers:
+        main:
+            path: php://stderr
