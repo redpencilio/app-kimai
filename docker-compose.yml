@@ -1,6 +1,6 @@
 services:
   kimai:
-    image: kimai/kimai2:apache-2.28.0
+    image: kimai/kimai2:apache-2.45.0
     volumes:
       - ./config/kimai/local.yaml:/opt/kimai/config/packages/local.yaml
       - ./data/kimai:/opt/kimai/var/data

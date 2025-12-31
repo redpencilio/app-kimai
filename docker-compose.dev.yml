@@ -4,6 +4,6 @@ services:
       - ./data/mysql-dump:/data
   kimai:
     environment:
-      - TRUSTED_HOSTS=nginx,localhost,127.0.0.1
+      - TRUSTED_HOSTS=|localhost|127.0.0.1
     ports:
       - "8001:8001"

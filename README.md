@@ -32,7 +32,7 @@ E.g.
 services:
   kimai:
     environment:
-      - TRUSTED_HOSTS=kimai.redpencil.io,nginx,localhost,127.0.0.1
+      - TRUSTED_HOSTS=kimai.redpencil.io|nginx|localhost|127.0.0.1
 ```
 
 ## How-to guides
