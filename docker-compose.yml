@@ -1,6 +1,6 @@
 services:
   kimai:
-    image: kimai/kimai2:apache-2.45.0
+    image: kimai/kimai2:2.70.2
     volumes:
       - ./config/kimai/local.yaml:/opt/kimai/config/packages/local.yaml
       - ./data/kimai:/opt/kimai/var/data
@@ -11,11 +11,10 @@ services:
     working_dir: "/opt/kimai"
     restart: unless-stopped
   sqldb:
-    image: mysql:5.7
+    image: mysql:8.4.3
     volumes:
       - ./data/mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=kimai
       - MYSQL_USER=kimai
-    command: --default-storage-engine innodb
     restart: unless-stopped

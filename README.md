@@ -15,7 +15,7 @@ services:
   kimai:
     environment:
       - APP_SECRET=arandomgeneratedstringthatisverylong
-      - "DATABASE_URL=mysql://kimai:my-kimai-user-password@sqldb/kimai?charset=utf8mb4&serverVersion=5.7.40"
+      - "DATABASE_URL=mysql://kimai:my-kimai-user-password@sqldb/kimai?charset=utf8mb4&serverVersion=8.4.0"
 ```
 
 Start the stack
